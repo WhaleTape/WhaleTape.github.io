@@ -1,6 +1,281 @@
+/*ALL*/
+*{
+    box-sizing: border-box;
+}
+
+/* =================
+Fonts
+================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Varela+Round&display=swap');
+
+/*
+font-family: 'Bebas Neue', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Varela Round', sans-serif;
+*/
+
+/* =================
+Typography
+================= */
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: #9CFFFA;
+    font-size: 3rem;
+    padding: .25rem; 
+    margin: 0;
+}
+
+.site-title h1{font-family: 'Bebas Neue', cursive;}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: #68500d;
+    font-size: 2.5rem;
+    margin: 0;
+    padding:.5rem;
+    text-align:center;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: black;
+    font-size: 2rem;
+    margin: 0;
+    padding: .4rem 1rem 0rem 1rem;
+    text-align:center;
+}
+
+p{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: #cfcfcf;
+    font-size: 1.5rem;
+    padding: 0 1rem .5rem 1rem;
+    line-height: 1.5;
+    letter-spacing: .5px;
+    text-align:center;
+}
+
+.subtitle {
+    font-weight: 700;
+    color: #1792d2;
+    font-size: 1rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+
+
+/* =================
+Images
+================= */
+
+img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* =================
+Layout
+================= */
+ 
+body{
+    background:#2F4323;
+}
+
 .container{
     width: 99%;
+    max-width: 100%;
     margin: 0;
     padding:0;
-   border: 1px solid magenta;
+  /* border: 1px solid magenta;*/
+}
+
+.container-nav{
+    background-color:#9CFFFA;
+}
+
+.centered{
+    align-content: center;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    background-color:#9CFFFA;
+}
+
+/* navigation */
+
+nav ul {
+    list-style: none;
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #707070;
+    font-weight: 700;
+    padding: .25em 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #1792d2;
+}
+
+.current-page {
+    border-bottom: 1px solid #707070;
+}
+
+.current-page:hover {
+    color: #707070;
+}
+
+/* =================
+Panels and Cards
+================= */
+
+.panel{
+    background-color:#3c4043;
+    padding: 01em;
+    text-align: center;
+}
+
+.card{
+    background-color: #4285f4;
+    padding:0.2em;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1rem;
+}
+
+.card p{
+    color:black;
+}
+
+/* =================
+Media Queries
+================= */
+
+/* Small devices (landscape phones, 375px to 720)*/
+@media (max-width: 719px){
+    .container{
+        max-width: 100%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:1rem;
+    }
+    .container-nav{
+        display: block;
+    }
+
+    nav li {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .panel{
+        display:block;
+    }
+
+    .card{
+        max-width: 90%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:1rem;
+    }
+}
+
+/* Medium devices (tablets, 720px to 1024)*/
+@media (min-width: 720px) and (max-width: 1023px){
+    .container{
+        max-width: 99%;
+    }
+
+    .container-nav{
+        display: block;
+    }
+
+    nav li {
+        margin: 0 1em;
+    }
+
+    .card{
+        max-width: 90%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:1rem;
+    }
+
+    .panel{
+        display:block;
+    }
+
+}
+
+/* Large devices (desktops, 1024px to 1920)*/
+@media (min-width: 1024px) and (max-width: 1919px){
+    .container{
+        max-width: 99%;
+    }
+
+    .container-nav{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    nav li {
+        margin-left: 2em;
+    }
+
+    .card{
+        width: 48%;
+        justify-content: space-between;
+        margin: .5em auto;
+    }
+
+    #projectCards{
+        display:flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* Extra large devices (large desktops, 1920px and up)*/
+@media (min-width: 1920px) {
+    
+    .container{
+        max-width: 1440px;
+        margin:0 auto;
+    }
+
+    .container-nav{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .card{
+        max-width: 32%;
+        margin: .5rem auto;
+        justify-content: space-between;
+    }
+
+    #projectCards{
+        display:flex;
+        flex-wrap: wrap;
+    }
 }
